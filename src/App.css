@@ -1,73 +1,136 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* Um cinza mais claro e limpo */
+  margin: 0;
   padding: 30px;
   color: #333;
 }
+
 .app {
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto 300px;
-  background: #efefef;
-  padding: 20px 30px;
-  border-radius: 10px;
+  background: #ffffff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona profundidade */
 }
 
 h1 {
   text-align: center;
+  font-size: 2rem;
+  color: #333974;
+  margin-bottom: 20px;
 }
+
 h2 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  color: #555;
 }
+
 p {
   margin: 10px 0;
+  line-height: 1.6;
 }
-input {
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-sizing: border-box;
+  font-size: 1rem;
+  background-color: #f9f9f9; /* Melhor contraste */
+  transition: border-color 0.3s;
 }
+
+input:focus,
+select:focus {
+  border-color: #333974;
+  outline: none;
+}
+
 button {
   background-color: #333974;
-  color: #fff;
-  padding: 5px 10px;
+  color: #ffffff;
+  padding: 8px 15px;
   margin-right: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  opacity: 0.8;
-  transition: 0.3s;
+  opacity: 0.9;
+  font-size: 0.9rem;
+  transition: all 0.3s;
 }
+
 button:hover {
   opacity: 1;
+  transform: scale(1.05); /* Efeito de destaque ao passar o mouse */
 }
+
 button.complete {
   background-color: #5cb85c;
 }
+
 button.remove {
   background-color: #d9534f;
 }
+
 .todo_form {
   padding-bottom: 1.5rem;
 }
-input,
-select {
-  padding: 5px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 100%;
-}
 
 .todo_list {
-  margin-left: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #555;
+  border-bottom: 2px solid #ddd; /* Linha mais destacada */
+  margin-bottom: 20px;
 }
+
 .todo {
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.todo:hover {
+  transform: translateY(-2px); /* Efeito flutuante */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.todo .content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.todo .content p:first-child {
+  font-weight: bold;
+  color: #333;
+}
+
+.todo .content p:last-child {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+  }
+
+  button {
+    margin-right: 5px;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
 }

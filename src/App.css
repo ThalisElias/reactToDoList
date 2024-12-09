@@ -7,7 +7,7 @@ body {
 .app {
   max-width: 800px;
   margin: 0 auto 300px;
-  background: #d8d8d8;
+  background: #efefef;
   padding: 20px 30px;
   border-radius: 10px;
 }
@@ -23,4 +23,51 @@ p {
 }
 input {
   box-sizing: border-box;
+}
+button {
+  background-color: #333974;
+  color: #fff;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+button:hover {
+  opacity: 1;
+}
+button.complete {
+  background-color: #5cb85c;
+}
+button.remove {
+  background-color: #d9534f;
+}
+.todo_form {
+  padding-bottom: 1.5rem;
+}
+input,
+select {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.todo_list {
+  margin-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
+}
+.todo {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

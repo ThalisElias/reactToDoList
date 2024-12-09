@@ -8,8 +8,8 @@ export const ToDo = ({ todo }) => {
         <p>({todo.category})</p>
       </div>
       <div>
-        <button>Completar</button>
-        <button>X</button>
+        <button className="complete">Completar</button>
+        <button className="remove">X</button>
       </div>
     </div>
   );
